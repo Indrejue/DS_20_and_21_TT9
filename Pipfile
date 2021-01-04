@@ -16,6 +16,7 @@ keras = "*"
 seaborn = "*"
 py-polars = "*"
 matplotlib = "*"
+jupyterlab = "*"
 
 [dev-packages]
 
