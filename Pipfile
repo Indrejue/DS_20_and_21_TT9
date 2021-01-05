@@ -10,7 +10,6 @@ scikit-learn = "*"
 jupyter = "*"
 lab = "*"
 spacy = "*"
-tensorflow-rocm = "*"
 tensorflow = "*"
 keras = "*"
 seaborn = "*"
@@ -19,6 +18,9 @@ matplotlib = "*"
 jupyterlab = "*"
 flask = "*"
 python-dotenv = "*"
+gunicorn = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
 
 [dev-packages]
 

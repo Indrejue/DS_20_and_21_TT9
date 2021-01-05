@@ -1,0 +1,1 @@
+web: gunicorn med_cabinet:APP -t 120
