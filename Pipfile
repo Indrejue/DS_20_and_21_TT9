@@ -17,6 +17,8 @@ seaborn = "*"
 py-polars = "*"
 matplotlib = "*"
 jupyterlab = "*"
+flask = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
