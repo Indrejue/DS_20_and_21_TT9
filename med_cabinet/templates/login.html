@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+{% block body %}
+
+
+<form action="/success" method="POST">
+<div class="login">
+<div class="login-screen">
+<div class="app-title">
+<h1>Med Cabinet</h1>
+<p> Med Cabinet for new cannabis consumers, especially those trying to get off of pharmaceuticals, 
+    who want to use cannabis as a means to battle medical conditions and ailments. Help patients find 
+    the right strains, dosing, intake method and intake schedule! Use user data along 
+    with strain data to build ML models to guide recommendations. </p>
+</div>
+<div class="login-form">
+<label class="login-field-icon fui-lock" for="login-pass"></label></div>
+<input type="submit" value="Accept" class="btn btn-primary btn-large btn-block">
+
+</div>
+</div>
+</div>
+</form>
+{% endblock %}
