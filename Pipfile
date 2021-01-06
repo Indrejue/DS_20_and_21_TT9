@@ -21,6 +21,9 @@ python-dotenv = "*"
 gunicorn = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
+hashlib = "*"
+psycopg2 = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
