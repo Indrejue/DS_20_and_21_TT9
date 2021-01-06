@@ -1,0 +1,97 @@
+body {
+  font-family: Arial;
+  background-color: #ffffff;
+  padding: 50px;
+  }
+  .login {
+  margin: 50px auto;
+  width: 500px;
+  }
+  .login-screen {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px
+  }
+  
+  .app-title {
+  text-align: center;
+  color: #777;
+  }
+  
+  .login-form {
+  text-align: center;
+  }
+  .control-group {
+  margin-bottom: 10px;
+  }
+
+/*
+ * Formatting the header area
+ */
+header {
+  background-color: #297457;
+  height: 35px;
+  width: 100%;
+  opacity: .9;
+  margin-bottom: 5px auto;
+}
+header h1.logo {
+  margin: 2px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  float: left;
+}
+header h1.logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+/*
+ * Centering the body content
+ */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+div.home {
+  padding: 10px 0 30px 0;
+  background-color: #E6E6FA;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+div.about {
+  padding: 10px 0 30px 0;
+  background-color: #E6E6FA;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+h2 {
+  font-size: 1.5em;
+  margin-top: 40px;
+  text-align: left;
+  letter-spacing: -2px;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: 100;
+  margin-top: 10px;
+  text-align: left;
+  letter-spacing: -1px;
+  color: #999;
+}
+.menu {
+  float: right;
+  margin-top: 8px;
+}
+.menu li {
+  display: inline;
+}
+.menu li + li {
+  margin-left: 35px;
+}
+.menu li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
