@@ -4,13 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pandas = "*"
 numpy = "*"
 scikit-learn = "*"
 jupyter = "*"
 lab = "*"
 spacy = "*"
-tensorflow = "*"
 keras = "*"
 seaborn = "*"
 py-polars = "*"
@@ -24,6 +22,8 @@ flask-migrate = "*"
 hashlib = "*"
 psycopg2 = "*"
 psycopg2-binary = "*"
+pandas = "==1.1.5"
+tensorflow-cpu = "==2.3.1"
 
 [dev-packages]
 
