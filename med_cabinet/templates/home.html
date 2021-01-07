@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <title>{% block doc_title %} {% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link href="multiselect.css" rel="stylesheet">
   </head>
 
   <body>
@@ -25,7 +26,7 @@
     <h2>Strain recommender</h2>
       <h3> Helping new cannabis consumers find the right strains </h3>
         <h4><u> Category: </u></h4>
-          <form action="/home" method="post"> 
+          <form action="/home"> 
               <div class="form-group">
                   <select id="mycategories" name='categories' multiple class="form-control">
                       {% for category in categories %}
