@@ -25,9 +25,9 @@
     <h2>Strain recommender</h2>
       <h3> Helping new cannabis consumers find the right strains </h3>
         <h4><u> Category: </u></h4>
-          <form action="/home"> 
+          <form action="/home" method="post"> 
               <div class="form-group">
-                  <select id="myform" name='categories' multiple class="form-control">
+                  <select id="mycategories" name='categories' multiple class="form-control">
                       {% for category in categories %}
                       <option value="{{ category }}">{{ category }}</option>
                       {% endfor %}
@@ -35,7 +35,7 @@
               </div>
             <h4><u> Ailments: </u></h4>
               <div class="form-group">
-                  <select id="myform" name='ailments' multiple class="form-control">
+                  <select id="myailments" name='ailments' multiple class="form-control">
                       {% for ailment in ailments %}
                       <option value="{{ ailment }}">{{ ailment }}</option>
                       {% endfor %}
@@ -43,7 +43,7 @@
               </div>
             <h4><u> Desired Effect: </u></h4>
               <div class="form-group">
-                  <select id="myform" name='effects' multiple class="form-control">
+                  <select id="myeffects" name='effects' multiple class="form-control">
                       {% for effect in effects %}
                       <option value="{{ effect }}">{{ effect }}</option>
                       {% endfor %}
@@ -51,7 +51,7 @@
               </div>
             <h4><u> Flavor: </u></h4>
               <div class="form-group">
-                  <select id="myform" name='flavors' multiple class="form-control">
+                  <select id="myflavors" name='flavors' multiple class="form-control">
                       {% for flavor in flavors %}
                       <option value="{{ flavor }}">{{ flavor }}</option>
                       {% endfor %}

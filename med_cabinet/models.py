@@ -25,6 +25,10 @@ def predict_strain():
     """
     Determine and return strain
     """
+    categories1 = 
+    ailments1 = 
+    effects1 = 
+    flavors1 = 
     return 
 
 

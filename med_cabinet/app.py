@@ -10,14 +10,15 @@ def create_app():
     def confirm():
         return render_template('confirm.html', title="Confirm")
 
-    @app.route('/home')
+    @app.route('/home', methods=['GET', 'POST'])
     def home():
-#        categories1 = request.values['categories']
-#        ailments1 = request.values['ailments']
-#        effects1 = request.values['effects']
-#        flavors1 = request.values['flavors']
+        categories1 = request.values.getlist('mycategories')
+        ailments1 = request.values.getlist('myailments')
+        effects1 = request.values.getlist('myeffects')
+        flavors1 = request.values.getlist('myflavors')
         return render_template('home.html', title="Home", categories=categories,
                                 ailments=ailments, effects=effects, flavors=flavors)
+
 
     @app.route('/about')
     def about():
