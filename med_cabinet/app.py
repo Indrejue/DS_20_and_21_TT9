@@ -1,4 +1,5 @@
 from os import getenv
+import pandas as pd
 from flask import Flask, flash, redirect, render_template, request, session, abort
 from .models import flavors, effects, ailments, categories
 
@@ -12,10 +13,10 @@ def create_app():
 
     @app.route('/home', methods=['GET', 'POST'])
     def home():
-        categories1 = request.values.getlist('mycategories')
-        ailments1 = request.values.getlist('myailments')
-        effects1 = request.values.getlist('myeffects')
-        flavors1 = request.values.getlist('myflavors')
+        categories1 = request.form.getlist('mycategories', type=bool)
+        ailments1 = request.form.getlist('myailments', type=bool)
+        effects1 = request.form.getlist('myeffects', type=bool)
+        flavors1 = request.form.getlist('myflavors', type=bool)
         return render_template('home.html', title="Home", categories=categories,
                                 ailments=ailments, effects=effects, flavors=flavors)
 

@@ -21,15 +21,7 @@ categories = ['crumble', 'pre-roll', 'drink', 'bath', 'soup', 'spread', 'wax', '
             'chocolate', 'disposable_vape', 'oil', 'concentrate', 'rso', 'shatter', 'topical', 'edibles', 
             'flowers']
 
-def predict_strain():
-    """
-    Determine and return strain
-    """
-    categories1 = 
-    ailments1 = 
-    effects1 = 
-    flavors1 = 
-    return 
+
 
 
 
