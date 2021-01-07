@@ -81,6 +81,14 @@ h3 {
   letter-spacing: -1px;
   color: #999;
 }
+h4 {
+  font-size: 1.0em;
+  font-weight: 100;
+  margin-top: 10px;
+  text-align: left;
+  letter-spacing: -1px;
+  color: rgb(0, 0, 0);
+}
 .menu {
   float: right;
   margin-top: 8px;
