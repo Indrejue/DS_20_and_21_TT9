@@ -17,29 +17,24 @@ def create_app():
 
     @app.route('/home', methods=['GET', 'POST'])
     def home():
-        categories1 = request.form.getlist('mycategories', type=bool)
-        ailments1 = request.form.getlist('myailments', type=bool)
-        effects1 = request.form.getlist('myeffects', type=bool)
-        flavors1 = request.form.getlist('myflavors', type=bool)
+        categories1 = request.form.getlist('mycategories')
+        ailments1 = request.form.getlist('myailments')
+        effects1 = request.form.getlist('myeffects')
+        flavors1 = request.form.getlist('myflavors')
         data = [categories1, ailments1, effects1, flavors1]
         df = pd.DataFrame(data)
         df.to_csv('data.csv')
-#        df = pd.DataFrame(columns=(flavors1, effects1, ailments1, categories1))
-#        out = model.kneighbors([df.iloc[0].values])
-#        indexs = out[1].flat[0:5].tolist()
-#        pred = weed.iloc[indexs]
         return render_template('home.html', title="Home", categories=categories,
-                                ailments=ailments, effects=effects, flavors=flavors, data=data)
+                                ailments=ailments, effects=effects, flavors=flavors)
     
     @app.route('/results', methods=['GET', 'POST'])
     def results():
-        #df = pd.DataFrame(columns=(flavors1, effects1, ailments1, categories1))
-#        out = model.kneighbors([df.iloc[0].values])
-#        indexs = out[1].flat[0:5].tolist()
-#        pred = weed.iloc[indexs]
         df = pd.read_csv('data.csv')
+        out = model.kneighbors([df.iloc[0].values])
+        indexs = out[1].flat[0:5].tolist()
+        pred = df.iloc[indexs]
         message = (str(df.columns) + str(df.shape) + str(df.values))
-        return render_template('results.html', title="results", message=message)
+        return render_template('results.html', title="results", message=message, results=pred)
 
 
     @app.route('/about')
