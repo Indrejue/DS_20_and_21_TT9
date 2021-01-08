@@ -2,54 +2,55 @@ body {
   font-family: Arial;
   background-color: #ffffff;
   padding: 50px;
-  }
-  .login {
+}
+.login {
   margin: 50px auto;
   width: 500px;
-  }
-  .login-screen {
+}
+.login-screen {
   background-color: #ffffff;
   padding: 20px;
-  border-radius: 5px
-  }
-  
-  .app-title {
+  border-radius: 5px;
+}
+
+.app-title {
   text-align: center;
   color: #777;
-  }
-  
-  .login-form {
+}
+
+.login-form {
   text-align: center;
-  }
-  .control-group {
+}
+.control-group {
   margin-bottom: 10px;
-  }
-  .form-group {
+}
+.form-group {
   padding: 1px;
   width: 100px;
-  }
-  .form-control {
+}
+.form-control {
   height: 100px;
   width: 200px;
-  }
+}
 
 input {
-height: 35px;
-width: 100px;
-margin-top: 40px;
-background-color: #297457;
-color: rgb(255, 255, 255);
+  height: 35px;
+  width: 100px;
+  margin-top: 40px;
+  background-color: #297457;
+  color: rgb(255, 255, 255);
 }
 
 /*
- * Formatting the header area
- */
+* Formatting the header area
+*/
 header {
   background-color: #297457;
   height: 35px;
   width: 100%;
-  opacity: .9;
-  margin-bottom: 5px auto;
+  opacity: 0.9;
+  margin: 5px auto;
+  padding: 5px;
 }
 header h1.logo {
   margin: 2px;
@@ -62,26 +63,27 @@ header h1.logo:hover {
   color: #fff;
   text-decoration: none;
 }
-/*
- * Centering the body content
- */
-.container {
-  width: 1200px;
-  margin: 0 auto;
+p {
+  width: auto;
+  margin: 5px auto;
+  word-wrap: break-word;
 }
+/*
+* Centering the body content
+*/
 div.home {
   padding: 10px 0 30px 0;
-  background-color: #E6E6FA;
+  background-color: #e6e6fa;
   -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
 div.about {
   padding: 10px 0 30px 0;
-  background-color: #E6E6FA;
+  background-color: #e6e6fa;
   -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
 h2 {
   font-size: 1.5em;
@@ -98,7 +100,7 @@ h3 {
   color: #999;
 }
 h4 {
-  font-size: 1.0em;
+  font-size: 1em;
   font-weight: 100;
   margin-top: 30px;
   margin-bottom: 5px;
@@ -110,13 +112,11 @@ h4 {
   float: right;
   margin-top: 8px;
 }
-.menu li {
-  display: inline;
-}
-.menu li + li {
-  margin-left: 35px;
-}
-.menu li a {
+.menu a {
   color: rgb(255, 255, 255);
   text-decoration: none;
+  display: inline;
+}
+.menu a + a {
+  margin-left: 35px;
 }

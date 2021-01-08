@@ -1,67 +1,39 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block doc_title %} {% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
-    <link href="multiselect.css" rel="stylesheet">
-  </head>
-
-  <body>
-    <header>
-      <div class="container">
-        <h1 class="logo">Med Cabinet</h1>
-          <strong><nav>
-          <ul class="menu">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('insights') }}">Insights</a></li>
-          </ul>
-        </nav></strong>
-      </div>
-    </header>
-
-
-    {% block content %}
-    <div class="container">
-    <h2>Strain recommender</h2>
-      <h3> Helping new cannabis consumers find the right strains </h3>
-        <h4><u> Category: </u></h4>
-          <form action="/results" method="post"> 
-              <div class="form-group">
-                  <select id="mycategories" name='categories' multiple class="form-control">
-                      {% for category in categories %}
-                      <option value="{{ category }}">{{ category }}</option>
-                      {% endfor %}
-                  </select>
-              </div>
-            <h4><u> Ailments: </u></h4>
-              <div class="form-group">
-                  <select id="myailments" name='ailments' multiple class="form-control">
-                      {% for ailment in ailments %}
-                      <option value="{{ ailment }}">{{ ailment }}</option>
-                      {% endfor %}
-                  </select>
-              </div>
-            <h4><u> Desired Effect: </u></h4>
-              <div class="form-group">
-                  <select id="myeffects" name='effects' multiple class="form-control">
-                      {% for effect in effects %}
-                      <option value="{{ effect }}">{{ effect }}</option>
-                      {% endfor %}
-                  </select>
-              </div>
-            <h4><u> Flavor: </u></h4>
-              <div class="form-group">
-                  <select id="myflavors" name='flavors' multiple class="form-control">
-                      {% for flavor in flavors %}
-                      <option value="{{ flavor }}">{{ flavor }}</option>
-                      {% endfor %}
-                  </select>
-              </div>
-            <input type="submit" value="Get results ">
-          </form> 
-       </div> 
-      {% endblock %}
-
-  </body>
-</html>
+{% extends "base.html" %} {% block content %}
+<h2>Strain recommender</h2>
+<h3>Helping new cannabis consumers find the right strains</h3>
+<h4><u> Category: </u></h4>
+<form action="/results" method="post">
+  <div class="form-group">
+    <select id="categories" name="categories" multiple class="form-control">
+      {% for category in categories %}
+      <option value="category_{{ category }}">{{ category }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <h4><u> Ailments: </u></h4>
+  <div class="form-group">
+    <select id="ailments" name="ailments" multiple class="form-control">
+      {% for ailment in ailments %}
+      <option value="ailment_{{ ailment }}">{{ ailment }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <h4><u> Desired Effect: </u></h4>
+  <div class="form-group">
+    <select id="effects" name="effects" multiple class="form-control">
+      {% for effect in effects %}
+      <option value="effect_{{ effect }}">{{ effect }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <h4><u> Flavor: </u></h4>
+  <div class="form-group">
+    <select id="flavors" name="flavors" multiple class="form-control">
+      {% for flavor in flavors %}
+      <option value="flavor_{{ flavor }}">{{ flavor }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <input type="submit" value="Get results " />
+</form>
+{% endblock %}

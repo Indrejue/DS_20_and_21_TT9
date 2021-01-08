@@ -1,24 +1,37 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block doc_title %} {% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/confirm.css') }}"/>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/confirm.css') }}"
+    />
   </head>
 
-{% block body %}
-
-    <div class="login">
+  <div class="login">
     <div class="login-screen">
-    <div class="login-form">
-    <div class="control-group">
-
-
-    <h1>Med Cabinet</h1>
-      <p><i> Medical Disclaimer: The Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. 
-              Always seek the advice of your physician or other qualified health provider with any questions you may have 
-              regarding a medical condition. </i></p>
-      <p align="center"><a href=home ><button class=grey style="height:50px;width:125px">Accept</button></a></p>
+      <div class="login-form">
+        <div class="control-group">
+          <h1>Med Cabinet</h1>
+          <p>
+            <i>
+              Medical Disclaimer: The Content is not intended to be a substitute
+              for professional medical advice, diagnosis, or treatment. Always
+              seek the advice of your physician or other qualified health
+              provider with any questions you may have regarding a medical
+              condition.
+            </i>
+          </p>
+          <p align="center">
+            <a href="home"
+              ><button class="grey" style="height: 50px; width: 125px">
+                Accept
+              </button></a
+            >
+          </p>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-{% endblock %}
+  </div>
+</html>

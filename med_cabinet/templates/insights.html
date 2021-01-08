@@ -1,46 +1,30 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block doc_title %} {% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
-  </head>
-
-  <body>
-    <header>
-      <div class="container">
-        <h1 class="logo">Med Cabinet</h1>
-        <strong><nav>
-          <ul class="menu">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('insights') }}">Insights</a></li>
-          </ul>
-        </nav></strong>
-      </div>
-    </header>
-
-    <div class="container">
-      {% block content %}
-      <h2>Scrubbing Data according to the Objective</h2>
-      <p> We want to generate weed strain recommendations based on quantifiable preferences- 
-      which was surprisingly difficult to find. There were only a handful of datasets that were 
-      appropriate for our objective- we selected  product and strain descriptors from KushyApp 
-      (https://github.com/kushyapp/cannabis-dataset/tree/master/Dataset) and we selected our 
-      ratings from Kaggle user kingburrito666 (https://www.kaggle.com/kingburrito666/cannabis-strains). 
-      It was necessary to incorporate some sort of demand metric since the KushyApp data only 
-      had descriptive variables and did not have any data that reflected desirability of the consumer. </p>
-      <h3>Our Predictive Model </h3>
-      <p> InputsoCategory what type of substance is preferred? Liquid? Vape? Edible? Smoking?
-      oAilmentswhat physical/mental symptoms does the consumer want to address?
-      oDesired Effectwhat should the consumer expect to feel after consumption?
-      oFlavor
-      Outputso5 recommendations with Brand and Product Name</p>
-      <h3>Natural Language Processing </h3>
-      <p>We did some rudimentary topic modeling- we parsed the descriptions in category, ailment, flavor, 
-      and effects into individual columns in order to be effectively used in our predictive model. 
-      Because most of the variables describing each product were categorical, k-nearest neighbors 
-      seemed like the best option for our topic modeling.</p>
-      {% endblock %}
-    </div>
-  </body>
-</html>
+{% extends "base.html" %} {% block content %}
+<h2>Scrubbing Data according to the Objective</h2>
+<p>
+  We want to generate weed strain recommendations based on quantifiable
+  preferences- which was surprisingly difficult to find. There were only a
+  handful of datasets that were appropriate for our objective- we selected
+  product and strain descriptors from KushyApp
+  (https://github.com/kushyapp/cannabis-dataset/tree/master/Dataset) and we
+  selected our ratings from Kaggle user kingburrito666
+  (https://www.kaggle.com/kingburrito666/cannabis-strains). It was necessary to
+  incorporate some sort of demand metric since the KushyApp data only had
+  descriptive variables and did not have any data that reflected desirability of
+  the consumer.
+</p>
+<h3>Our Predictive Model</h3>
+<p>
+  InputsoCategory what type of substance is preferred? Liquid? Vape? Edible?
+  Smoking? oAilmentswhat physical/mental symptoms does the consumer want to
+  address? oDesired Effectwhat should the consumer expect to feel after
+  consumption? oFlavor Outputso5 recommendations with Brand and Product Name
+</p>
+<h3>Natural Language Processing</h3>
+<p>
+  We did some rudimentary topic modeling- we parsed the descriptions in
+  category, ailment, flavor, and effects into individual columns in order to be
+  effectively used in our predictive model. Because most of the variables
+  describing each product were categorical, k-nearest neighbors seemed like the
+  best option for our topic modeling.
+</p>
+{% endblock %}
