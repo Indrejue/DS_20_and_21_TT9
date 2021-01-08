@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block doc_title %} {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1 class="logo">Med Cabinet</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('insights') }}">Insights</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+
+    <div class="container">
+      {% block content %}
+      <h2>Lambda DS20 - DS21 (TT9)</h2>
+      <p> Something Something Something </p>
+      <p>{{ message }}</p>
+      <p>{{ results }}</p>
+      {% endblock %}
+    </div>
+  </body>
+</html>

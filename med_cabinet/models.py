@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from joblib import load
 
 flavors = ['earthy', 'tree_fruit', 'pine', 'vanilla', 'sweet', 'chestnut', 'apricot', 'apple', 
             'skunk', 'grape', 'diesel', 'lime', 'honey', 'pungent', 'violet', 'menthol', 'chemical', 'cheese',
@@ -20,6 +19,8 @@ categories = ['crumble', 'pre-roll', 'drink', 'bath', 'soup', 'spread', 'wax', '
             'snack', 'kief', 'candy', 'bubble_hash', 'vapes', 'pill', 'tincture', 'dressing', 'salt', 
             'chocolate', 'disposable_vape', 'oil', 'concentrate', 'rso', 'shatter', 'topical', 'edibles', 
             'flowers']
+
+
 
 
 
